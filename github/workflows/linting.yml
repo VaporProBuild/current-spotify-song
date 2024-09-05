@@ -1,0 +1,21 @@
+name: Linting
+
+on: push
+
+jobs:
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.1.0'
+
+      - name: Install node_modules, Lint
+        run: |
+          cd frontend
+          npm install
+          npm run lint && npm run prettier
