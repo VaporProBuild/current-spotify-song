@@ -16,6 +16,5 @@ jobs:
 
       - name: Install node_modules, Lint
         run: |
-          cd frontend
           npm install
           npm run lint && npm run prettier
