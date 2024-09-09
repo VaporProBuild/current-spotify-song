@@ -10,7 +10,8 @@
     "lint": "npx eslint .",
     "lint:fix": "npm run lint -- --fix",
     "prettier": "npx prettier . --check",
-    "prettier:fix": "npm run prettier -- --write"
+    "prettier:fix": "npm run prettier -- --write",
+    "deploy": "vite build && gh-pages -d dist"
   },
   "dependencies": {
     "@vuepic/vue-datepicker": "^8.8.0",
